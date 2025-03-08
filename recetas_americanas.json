@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "nombre": "Hamburguesa Clásica",
+            "imagen": "./assets/fotos/hamburguesa.png",
+            "descripcion": "Una hamburguesa de carne de res con queso, lechuga, tomate y pan esponjoso."
+        },
+        {
+            "nombre": "Pancakes con Miel",
+            "imagen":  "./assets/fotos/pancakes.png",
+            "descripcion": "Tortitas esponjosas servidas con mantequilla y miel de maple."
+        },
+        {
+            "nombre": "Chili con Carne",
+            "imagen":  "./assets/fotos/chili.png",
+            "descripcion": "Un guiso picante de carne, frijoles, tomate y especias, originario de Texas."
+        },
+        {
+            "nombre": "BBQ Ribs",
+            "imagen":  "./assets/fotos/ribs.png",
+            "descripcion": "Costillas de cerdo asadas con salsa barbacoa, típicas del sur de EE.UU."
+        },
+        {
+            "nombre": "Tacos al Pastor",
+            "imagen":  "./assets/fotos/tacos.png",
+            "descripcion": "Tacos de carne de cerdo adobada con piña, típicos de México."
+        },
+        {
+            "nombre": "Ceviche Peruano",
+            "imagen":  "./assets/fotos/ceviche.png",
+            "descripcion": "Pescado marinado en jugo de limón con cebolla, ají y cilantro, plato emblemático de Perú."
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Foodie</title>
+    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Online Foodie</h1>
+
+    <main>
+        <section id="buscador"">
+            <div class=" bloque">
+            <h2>Seleccione una opción:</h2>
+            <select id="miSelector">
+                <option value="recetas_espanolas.json">Recetas Españolas</option>
+                <option value="recetas_europeas.json">Recetas Europeas</option>
+                <option value="recetas_americanas.json">Recetas Americanas</option>
+            </select>
+            <br>
+            <div class="bloque">
+                <input id="miInput" placeholder="Ingrese para buscar...">
+                <br>
+                <button id="miBoton">Buscar</button>
+            </div>
+            </div>
+        </section>
+
+        <div class="bloque">
+            <ul id="miListado">
+            </ul>
+        </div>
+    </main>
+
+    <footer id="footer"></footer>
+    <script src="./assets/script.js"></script>
+</body>
+
+</html>

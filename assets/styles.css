@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    /*Si lo comentamos en dispositivos móviles y tablets se ve perfecto*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+    background-image: linear-gradient(90deg, rgba(200, 0, 0, .5) 50%, transparent 50%),
+        linear-gradient(rgba(200, 0, 0, .5) 50%, transparent 50%);
+    background-size: 50px 50px;
+}
+
+h1 {
+    margin-top: 96px;
+    margin-bottom: 30px;
+    font-size: 100px;
+    text-align: center;
+    transition: all 300ms;
+}
+
+h1:hover {
+    text-shadow:
+        0px 0px 1px white,
+        1px 1px 4px white,
+        2px 2px 6px white,
+        3px 3px 8px white;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 300px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 2px black, 1px 1px 4px black, 2px 2px 6px black;
+    background-color: #E37F7F;
+    margin: 0px auto;
+    margin-top: 85px;
+    margin-bottom: 50px;
+    transition: all 300ms;
+}
+
+#buscador:hover {
+    box-shadow: 0px 0px 1px white, 1px 1px 4px white, 2px 2px 6px white;
+}
+
+.bloque {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#miListado {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
+    align-items: center;
+    /* Alinea verticalmente */
+}
+
+
+.card {
+    width: 28%;
+    /* Ajustamos para que entren más en una fila */
+    max-width: 350px;
+    /* Limitamos el tamaño máximo */
+    min-width: 250px;
+    /* Evitamos que sean demasiado pequeñas */
+    height: auto;
+    /* Hacemos la altura dinámica */
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 300ms;
+}
+
+
+.card:hover .card-title {
+    background-color: #D73F3F;
+    color: white;
+}
+
+.card-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 300ms;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.card-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.card:hover .card-description {
+    opacity: 1;
+}
+
+.miClase {
+    font-size: 100px;
+}
+
+footer {
+    margin-top: 50px;
+    background-color: #D73F3F;
+    text-shadow: 0px 0px 1px white, 1px 1px 4px white, 2px 2px 6px white;
+
+}
+
+.textoFooter {
+    padding: 20px;
+}
+
+#myLink {
+    text-decoration: none;
+    color: rgb(14, 191, 14);
+    font-weight: 900;
+    transition: all 300ms;
+}
+
+#myLink:hover {
+    color: rgb(22, 235, 22);
+    text-shadow: 0px 0px 1px black, 1px 1px 4px black, 2px 2px 6px black;
+}
+
+/* Medias Queries para hacer el diseño responsive */
+@media (min-width: 1025px) {
+    #miListado {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Centrar las tarjetas */
+        gap: 20px;
+        /* Espacio entre tarjetas */
+    }
+
+    .card {
+        flex: 1;
+        /* Permite que la tarjeta crezca si es la única */
+        min-width: 422px;
+        /* Mínimo ancho para evitar tarjetas demasiado pequeñas */
+        max-width: 500px;
+        /* Limitamos el tamaño máximo */
+        width: calc(33.33% - 40px);
+        /* Se ajusta a 3 tarjetas por fila */
+        height: 390px;
+    }
+
+    .card-image {
+        margin-top: 10px;
+        height: 305px;
+        margin-top: 10px;
+        width: 100%;
+        /* Asegura que la imagen ocupe todo el ancho disponible */
+        height: 305px;
+        /* Mantiene una altura fija */
+        object-fit: contain;
+        /* Ajusta la imagen para que se vea completa sin recortarse */
+    }
+
+    .card-description {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    #buscador {
+        width: 50%;
+        height: 250px;
+    }
+
+    .card {
+        width: 40%;
+        /* Para que entren dos tarjetas por fila */
+        max-width: 300px;
+    }
+
+    .card-description {
+        font-size: 20px;
+    }
+
+
+    .miClase {
+        font-size: 80px;
+    }
+}
+
+/* Media Query para pantallas más grandes (Tabletas) */
+@media (max-width: 768px) {
+    #buscador {
+        width: 42%;
+        /* Aumentamos el ancho para más espacio */
+        height: auto;
+        /* Usamos altura automática para mayor flexibilidad */
+        padding: 15px;
+        /* Añadimos un padding adecuado */
+        margin-bottom: 30px;
+        /* Separación con el siguiente contenido */
+        display: flex;
+        justify-content: center;
+        /* Alineamos el buscador al centro */
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 599px;
+    }
+    .card-image{
+        width: 100%;
+        height: 357px;
+        border-radius: 5px;
+        cursor: pointer; 
+    }
+
+
+    .miClase {
+        font-size: 45px;
+        /* Reducimos el tamaño de la fuente para pantallas medianas */
+    }
+
+    #miListado {
+        flex-direction: column;
+        /* Cambiamos a columna para una mejor distribución en pantallas pequeñas */
+        gap: 20px;
+        /* Añadimos espacio entre las tarjetas */
+        align-items: center;
+        /* Alineamos las tarjetas al centro */
+    }
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+    body {
+        padding: 0 10px;
+        /* Añadimos padding a los lados para evitar que el contenido se pegue a los bordes */
+    }
+
+
+
+    #buscador {
+        font-size: 50px;
+        width: 90%;
+        /* Reducimos el ancho para que el buscador tenga suficiente espacio */
+        height: auto;
+        /* Aseguramos que el alto se ajuste al contenido */
+        padding: 30px;
+        /* Ajustamos el padding */
+        margin-bottom: 40px;
+        /* Añadimos separación con el siguiente contenido */
+    }
+
+    #miSelector,
+    #miInput {
+        width: 90%;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: -26px;
+    }
+
+    #miBoton {
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80%;
+        /* En móviles ocupan el 100% del ancho */
+        max-width: none;
+        /* Eliminamos cualquier límite de ancho */
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 30px;
+    }
+
+    .card-image {
+        width: 90%;
+        height: 200px;
+    }
+
+    .card-description {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 100px;
+        /* Ajustamos el tamaño del título para dispositivos móviles pequeños */
+        text-align: center;
+        /* Aseguramos que el título esté centrado */
+        margin: 20px 0;
+        /* Añadimos márgenes para dar espacio al título */
+    }
+    h2{
+        font-size: 25px;
+        margin-bottom: 27px;
+    }
+
+    .miClase {
+        font-size: 30px;
+        /* Reducimos aún más el tamaño de la fuente */
+    }
+
+    footer {
+        font-size: 20px;
+        /* Reducimos el tamaño del texto del pie de página */
+        text-align: center;
+        /* Aseguramos que el pie de página esté centrado */
+        /*padding: 10px 0;*/
+        /* Añadimos algo de padding para no quedar pegados a los bordes */
+    }
+
+    #myLink {
+        font-size: 14px;
+        /* Reducimos el tamaño de los enlaces en el pie de página */
+        text-decoration: none;
+        color: rgb(14, 191, 14);
+        font-weight: 900;
+        transition: all 300ms;
+    }
+
+    #myLink:hover {
+        color: rgb(22, 235, 22);
+        text-shadow: 0px 0px 1px black, 1px 1px 4px black, 2px 2px 6px black;
+    }
+}
+@media (max-width: 412px) {
+    body {
+        padding: 0 10px;
+        /* Añadimos padding a los lados para evitar que el contenido se pegue a los bordes */
+    }
+
+    #buscador {
+        font-size: 50px;
+        width: 90%;
+        /* Reducimos el ancho para que el buscador tenga suficiente espacio */
+        height: auto;
+        /* Aseguramos que el alto se ajuste al contenido */
+        padding: 30px;
+        /* Ajustamos el padding */
+        margin-bottom: 40px;
+        /* Añadimos separación con el siguiente contenido */
+    }
+
+    #miSelector,
+    #miInput {
+        width: 90%;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: -26px;
+    }
+
+    #miBoton {
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80%;
+        /* En móviles ocupan el 100% del ancho */
+        max-width: none;
+        /* Eliminamos cualquier límite de ancho */
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 30px;
+    }
+
+    .card-image {
+        width: 90%;
+        height: 200px;
+    }
+
+    .card-description {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 100px;
+        /* Ajustamos el tamaño del título para dispositivos móviles pequeños */
+        text-align: center;
+        /* Aseguramos que el título esté centrado */
+        margin: 20px 0;
+        /* Añadimos márgenes para dar espacio al título */
+    }
+    h2{
+        font-size: 25px;
+        margin-bottom: 27px;
+    }
+
+    .miClase {
+        font-size: 30px;
+        /* Reducimos aún más el tamaño de la fuente */
+    }
+
+    footer {
+        font-size: 20px;
+        /* Reducimos el tamaño del texto del pie de página */
+        text-align: center;
+        /* Aseguramos que el pie de página esté centrado */
+        /*padding: 10px 0;*/
+        /* Añadimos algo de padding para no quedar pegados a los bordes */
+    }
+
+    #myLink {
+        font-size: 14px;
+        /* Reducimos el tamaño de los enlaces en el pie de página */
+        text-decoration: none;
+        color: rgb(14, 191, 14);
+        font-weight: 900;
+        transition: all 300ms;
+    }
+
+    #myLink:hover {
+        color: rgb(22, 235, 22);
+        text-shadow: 0px 0px 1px black, 1px 1px 4px black, 2px 2px 6px black;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        padding: 0 10px;
+        /* Añadimos padding a los lados para evitar que el contenido se pegue a los bordes */
+    }
+
+
+
+    #buscador {
+        font-size: 50px;
+        width: 90%;
+        /* Reducimos el ancho para que el buscador tenga suficiente espacio */
+        height: auto;
+        /* Aseguramos que el alto se ajuste al contenido */
+        padding: 30px;
+        /* Ajustamos el padding */
+        margin-bottom: 40px;
+        /* Añadimos separación con el siguiente contenido */
+    }
+   
+    
+
+
+    #miSelector,
+    #miInput {
+        width: 90%;
+        height: 30px;
+        font-size: 20px;
+        margin-bottom: -26px;
+    }
+
+    #miBoton {
+        width: 100px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .card {
+        width: 80%;
+        /* En móviles ocupan el 100% del ancho */
+        max-width: none;
+        /* Eliminamos cualquier límite de ancho */
+        height: 280px;
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 30px;
+    }
+
+    .card-image {
+        width: 90%;
+        height: 200px;
+    }
+
+    .card-description {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 100px;
+        /* Ajustamos el tamaño del título para dispositivos móviles pequeños */
+        text-align: center;
+        /* Aseguramos que el título esté centrado */
+        margin: 20px 0;
+        /* Añadimos márgenes para dar espacio al título */
+    }
+    h2{
+        font-size: 25px;
+        margin-bottom: 27px;
+    }
+
+    .miClase {
+        font-size: 30px;
+        /* Reducimos aún más el tamaño de la fuente */
+    }
+
+    footer {
+        font-size: 20px;
+        /* Reducimos el tamaño del texto del pie de página */
+        text-align: center;
+        /* Aseguramos que el pie de página esté centrado */
+        /*padding: 10px 0;*/
+        /* Añadimos algo de padding para no quedar pegados a los bordes */
+    }
+
+    #myLink {
+        font-size: 14px;
+        /* Reducimos el tamaño de los enlaces en el pie de página */
+        text-decoration: none;
+        color: rgb(14, 191, 14);
+        font-weight: 900;
+        transition: all 300ms;
+    }
+
+    #myLink:hover {
+        color: rgb(22, 235, 22);
+        text-shadow: 0px 0px 1px black, 1px 1px 4px black, 2px 2px 6px black;
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "nombre": "Paella Valenciana",
+            "imagen": "./assets/fotos/paella.jpg",
+            "descripcion": "Un arroz tradicional con conejo, pollo, judías verdes y garrofón."
+        },
+        {
+            "nombre": "Gazpacho Andaluz",
+            "imagen": "./assets/fotos/gazpacho.png",
+            "descripcion": "Sopa fría de tomate, pimiento, pepino y ajo, perfecta para el verano."
+        },
+        {
+            "nombre": "Tortilla Española",
+            "imagen": "./assets/fotos/tortilla.jpg",
+            "descripcion": "Tortilla de patatas con cebolla y huevo, un clásico de la gastronomía española."
+        },
+        {
+            "nombre": "Fabada Asturiana",
+            "imagen": "./assets/fotos/fabada.png",
+            "descripcion": "Un guiso tradicional de Asturias a base de fabes, chorizo, morcilla y panceta."
+        },
+        {
+            "nombre": "Pulpo a la Gallega",
+            "imagen": "./assets/fotos/pulpo.jpg",
+            "descripcion": "Pulpo cocido y servido con pimentón, sal gruesa y aceite de oliva."
+        },
+        {
+            "nombre": "Cochinillo Asado",
+            "imagen": "./assets/fotos/cochinillo.jpg",
+            "descripcion": "Cochinillo asado al horno, típico de Segovia, con piel crujiente y carne jugosa."
+        }
+    ]
+}

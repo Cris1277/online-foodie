@@ -1,0 +1,34 @@
+{
+    "data": [
+        {
+            "nombre": "Coq au Vin",
+            "imagen": "./assets/fotos/coq.png",
+            "descripcion": "Un guiso francés de pollo cocinado a fuego lento en vino tinto con champiñones y cebollitas."
+        },
+        {
+            "nombre": "Lasagna Bolognesa",
+            "imagen": "./assets/fotos/lasagna.png",
+            "descripcion": "Un plato italiano en capas con pasta, carne, salsa de tomate y queso."
+        },
+        {
+            "nombre": "Schnitzel Vienés",
+            "imagen": "./assets/fotos/schnitzel.png",
+            "descripcion": "Un filete de ternera empanado y frito, típico de Austria."
+        },
+        {
+            "nombre": "Goulash Húngaro",
+            "imagen": "./assets/fotos/goulash.png",
+            "descripcion": "Un estofado de carne con paprika y verduras, muy popular en Hungría."
+        },
+        {
+            "nombre": "Fish and Chips",
+            "imagen": "./assets/fotos/fish.png",
+            "descripcion": "Pescado rebozado y frito acompañado de patatas fritas, típico del Reino Unido."
+        },
+        {
+            "nombre": "Moussaka Griega",
+            "imagen": "./assets/fotos/moussaka.png",
+            "descripcion": "Un pastel de berenjena con carne de cordero y bechamel, típico de Grecia."
+        }
+    ]
+}
